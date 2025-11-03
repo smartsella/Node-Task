@@ -1,7 +1,8 @@
-const dialogues = ["Mahendra Baahubali yagiya naan!"];
+const dialogues = ["Mahendra Baahubali yagiya naan"];
 
 const getDialogue = () => {
-  return dialogues;
+  const randomIndex = Math.floor(Math.random() * dialogues.length);
+  return dialogues[randomIndex];
 };
 
 export default getDialogue;
