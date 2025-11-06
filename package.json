@@ -1,0 +1,25 @@
+{
+  "name": "task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "http.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon http.js",
+    "start": "node http.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smartsella/Node-Task.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smartsella/Node-Task/issues"
+  },
+  "homepage": "https://github.com/smartsella/Node-Task#readme",
+  "dependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
