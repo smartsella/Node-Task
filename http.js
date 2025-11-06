@@ -1,10 +1,9 @@
-// Import HTTP module
 import http from "http";
 
-// Set your port number
+//port number
 const port = 3000;
 
-// Create a basic HTTP server
+//HTTP server
 const server = http.createServer((req, res) => {
   // Set response type as plain text
   res.writeHead(200, { "Content-Type": "text/plain" });

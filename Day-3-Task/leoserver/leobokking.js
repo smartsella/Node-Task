@@ -3,9 +3,7 @@ import fs from "fs";
 //Write file
 fs.writeFileSync(
   "leomoviedetail.txt",
-  `Movie: Leo , Date: 05:11:2025 , Time: 9:00am , Fare: 200rs
-Movie: Leo , Date: 05:11:2025 , Time: 02:00pm , Fare: 200rs
-Movie: Leo , Date: 05:11:2025 , Time: 09:00pm , Fare: 250rs`
+  `Movie: Leo , Date: 05:11:2025 , Time: 9:00am`
 );
 
 //reading and checkk exita
