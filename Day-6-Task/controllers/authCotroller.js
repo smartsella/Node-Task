@@ -1,37 +1,39 @@
-export const authCotroller = (req, res) => {
+// BODY Controller
+export const authController = (req, res) => {
   const { name } = req.body;
   if (name) {
     res.status(200).json({ message: name, msg: "done" });
   } else {
-    res.status(404).json({ message: "error msg" });
+    res.status(400).json({ msg: "Name is required" });
   }
 };
 
-export const paramscontroller = (req, res) => {
+// PARAMS Controller
+export const paramsController = (req, res) => {
   const { id } = req.params;
   if (id) {
     res.status(200).json({ data: id, msg: "done" });
   } else {
-    res.status(404).json({ msg: "error msg" });
+    res.status(400).json({ msg: "ID not found in params" });
   }
 };
 
-export const querycontroller = (req, res) => {
-  const user = req.query;
-
-  if (user) {
-    res.status(200).json({ name: user, msg: "donemsg" });
-  } else {
-    res.status(404).json({ msg: "error msg" });
-  }
-};
-
-export const headercontroller = (req, res) => {
-  const { user } = req.body;
-
+// QUERY Controller
+export const queryController = (req, res) => {
+  const { user } = req.query;
   if (user) {
     res.status(200).json({ name: user, msg: "done msg" });
   } else {
-    res.status(404).json({ msg: "error msg" });
+    res.status(400).json({ msg: "User query missing" });
+  }
+};
+
+// HEADER Controller
+export const headerController = (req, res) => {
+  const user = req.headers["user"];
+  if (user) {
+    res.status(200).json({ name: user, msg: "done msg" });
+  } else {
+    res.status(400).json({ msg: "User header missing" });
   }
 };
