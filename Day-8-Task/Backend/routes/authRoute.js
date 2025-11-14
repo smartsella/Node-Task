@@ -1,13 +1,13 @@
 import express from "express";
-import { authController, getdatas } from "../controllers/authController.js";
+import { Creatdata, Getdata } from "../controller/authController.js";
 
-const route = express.Router();
+const Routeer = express.Router();
 
-route.post("/control", authController);
-route.get("/data", getdatas);
+Routeer.post("/control", Creatdata);
+Routeer.get("/getdata", Getdata);
 
-export default route;
+export default Routeer;
 
-// http://localhost:3000/api/auth/control
+// http://localhost:3000/api/route/control
 
-// http://localhost:3000/api/auth/data
+// http:localhost:3000/api/route/getdata
